@@ -108,3 +108,16 @@ table tbody tr:last-child td:first-child {
 table tbody tr:last-child td:last-child {
   border-bottom-right-radius: 16px;
 }
+@media screen and (max-width: 600px) {
+  table {
+    font-size: 14px;
+  }
+
+  th, td {
+    padding: 10px 12px;
+  }
+
+  .table-wrapper {
+    padding: 0 10px; /* กันชนซ้าย-ขวา */
+  }
+}
