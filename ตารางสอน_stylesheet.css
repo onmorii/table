@@ -6,7 +6,7 @@ body {
   padding: 0;
   font-family: 'Segoe UI', Tahoma, sans-serif;
   background-color: #f0f2f7;
-  color: #222; /* สีตัวอักษรเข้ม เห็นชัดทุกพื้นหลัง */
+  color: #222;
 }
 
 /* ==== Layout Container ==== */
@@ -27,7 +27,7 @@ h1, h2 {
   background: linear-gradient(90deg, #6b6bc2, #4a4a8a);
   color: white;
   border-radius: 12px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
 /* ==== Content Boxes ==== */
@@ -36,7 +36,7 @@ p, .DESCRIPTION {
   color: #222;
   padding: 16px 20px;
   border-radius: 12px;
-  box-shadow: 0 1px 5px rgba(0,0,0,0.05);
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.05);
   line-height: 1.6;
   margin: 0;
 }
@@ -45,21 +45,21 @@ p, .DESCRIPTION {
   border-left: 5px solid #4a4a8a;
 }
 
-/* ==== Section Component Box ==== */
+/* ==== Section Wrapper ==== */
 section {
   padding: 16px;
   background-color: #ffffff;
   border-radius: 14px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
 }
 
-/* ==== Table Wrapper (Responsive Scroll) ==== */
+/* ==== Table Wrapper (Optional Scroll on Mobile) ==== */
 .table-wrapper {
   width: 100%;
   overflow-x: auto;
 }
 
-/* ==== Table ==== */
+/* ==== Table Full Width + Rounded ==== */
 table {
   width: 100%;
   table-layout: auto;
@@ -67,7 +67,8 @@ table {
   border-spacing: 0;
   background-color: white;
   border-radius: 16px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  overflow: hidden; /* ✅ สำคัญมากสำหรับ border-radius */
 }
 
 /* ==== Table Header ==== */
@@ -76,13 +77,14 @@ thead th {
   color: white;
 }
 
-/* ==== Table Cells ==== */
+/* ==== Cell Styling ==== */
 th, td {
   padding: 12px 20px;
   border-bottom: 1px solid #ddd;
   white-space: nowrap;
   word-break: break-word;
   text-align: center;
+  background-color: white; /* ✅ เพื่อให้ขอบมนแสดงถูกต้อง */
 }
 
 /* ==== Zebra Striping ==== */
@@ -93,7 +95,7 @@ tr:hover {
   background-color: #f0f0ff;
 }
 
-/* ==== Border Radius for Corners ==== */
+/* ==== Border Radius (Visible Corners) ==== */
 table thead tr:first-child th:first-child {
   border-top-left-radius: 16px;
 }
